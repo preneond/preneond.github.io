@@ -8,12 +8,12 @@ module.exports = {
     title: `Ondrej Prenek | AI & Machine Learning Engineer`,
     // Description that goes under your name in main bio
     description: `AI & Machine Learning Engineer | Sport Enthusiast`,
+    // Optional: LinkedIn account URL
+    linkedin: `https://www.linkedin.com/in/ondrejprenek/`,
     // Optional: Twitter account handle
     author: `@ondraprenek`,
     // Optional: Github account URL
     github: `https://github.com/preneond`,
-    // Optional: LinkedIn account URL
-    linkedin: `https://www.linkedin.com/in/ondrejprenek/`,
     // Content of the About Me section
     about: `Hi there 👋 \n I’m Ondrej Prenek, I have 3 years of work experience in the AI & Machine Learning field, \n building projects for the clients, using different programming tools and languages like Python, C/C++, Java.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
@@ -64,6 +64,19 @@ module.exports = {
           'Kubernetes, Docker, Amazon Web Services (AWS), CI / CD',
       },
     ],
+
+    education: [
+      {
+        name: 'Master\'s Degree (MSc.), Czech Technical University in Prague',
+        description:
+          'Artificial Intelligence, 2018-2020' ,
+      },
+      {
+        name: 'Bachelor\'s Degree (Bc.), Czech Technical University in Prague',
+        description:
+          'Computer Science, 2015-2018' ,
+      },
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
