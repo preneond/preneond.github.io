@@ -1,19 +1,22 @@
 import React from 'react';
 
 import Section from '../section';
-import SummaryItem from '../summary-item';
+import SummaryBigItem from '../summary-big-item';
 
 const SectionExperience = ({ experience }) => {
   if (!experience.length) return null;
-
-  return (
+  console.log(experience)
+  return (  
     <Section title="Experience">
       {experience.map((item) => (
-        <SummaryItem
+        <SummaryBigItem
           key={item.name}
           name={item.name}
-          description={item.description}
+          position={item.position}
+          period={item.period}
           link={item.link}
+          description={item.description}
+          subitems={item.subitems}
         />
       ))}
     </Section>

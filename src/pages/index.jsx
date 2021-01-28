@@ -10,6 +10,8 @@ import SectionExperience from '../components/section-experience';
 import SectionProjects from '../components/section-projects';
 import SectionSkills from '../components/section-skills';
 import SectionEducation from '../components/section-education';
+import SectionPresentations from '../components/section-presentations'
+import SectionCertificates from '../components/section-certificates'
 import SEO from '../components/seo';
 
 const Index = ({ data }) => {
@@ -20,6 +22,8 @@ const Index = ({ data }) => {
   const skills = get(data, 'site.siteMetadata.skills', false);
   const education = get(data, 'site.siteMetadata.education', false);
   const noBlog = !posts || !posts.length;
+  const presentations = get(data, 'site.siteMetadata.presentations', false);
+  const certificates = get(data, 'site.siteMetadata.certificates', false);
 
   return (
     <Layout>
@@ -28,13 +32,11 @@ const Index = ({ data }) => {
       {about && <SectionAbout about={about} />}
       {projects && projects.length && <SectionProjects projects={projects} />}
       {!noBlog && <SectionBlog posts={posts} />}
-      {experience && experience.length && (
-        <SectionExperience experience={experience} />
-      )}
-      {education && education.length && (
-        <SectionEducation education={education} />
-      )}
+      {experience && experience.length && <SectionExperience experience={experience} />}
+      {education && education.length && <SectionEducation education={education} />}
       {skills && skills.length && <SectionSkills skills={skills} />}
+      {presentations && presentations.length && <SectionPresentations presentations={presentations} />}
+      {certificates && certificates.length && <SectionCertificates certificates={certificates} />}
     </Layout>
   );
 };
@@ -59,14 +61,28 @@ export const pageQuery = graphql`
         }
         experience {
           name
+          position
           description
+          period
           link
+          subitems {
+            name
+            description
+          }
         }
         education {
           name
           description
         }
         skills {
+          name
+          description
+        }
+        certificates {
+          name
+          description
+        }
+        presentations {
           name
           description
         }

@@ -14,8 +14,10 @@ module.exports = {
     author: `@ondraprenek`,
     // Optional: Github account URL
     github: `https://github.com/preneond`,
+    // Optional: email link
+    mail: 'ondra.prenek@gmail.com',
     // Content of the About Me section
-    about: `Hi there 👋 \n I’m Ondrej Prenek, I have 3 years of work experience in the AI & Machine Learning field, \n building projects for the clients, using different programming tools and languages like Python, C/C++, Java.`,
+    about: 'Hi there 👋 \n I’m Ondrej Prenek, I have 3 years of work experience in the AI & Machine Learning field, building projects for the clients, using different programming tools and languages like Python, C/C++, Java. In\xA0addition, I have experience as a mobile application developer from the past.',
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     // projects: [
     //   // {
@@ -29,39 +31,64 @@ module.exports = {
     experience: [
       {
         name: 'IBM',
-        description: 'Machine Learning Engineer, May 2019 - Present',
-        link: 'https://www.ibm.com/'
+        position: 'Machine Learning Engineer',
+        period: 'Apr 2019 - Present',
+        link: 'https://watson-ilab.mybluemix.net',
+        description: '• Led and participated in international PoC and MVP projects oriented on Statistical Machine Learning, Computer Vision, and NLP',
+        subitems: [{
+          name: 'Raiffeisen Bank, Austria',
+          description: 'Detection of abandonment of payment places by employees; Detection of open cache drawers at payment points without the presence of customers '
+        },{
+          name: 'Skoda Auto Transportation, Czech Republic',
+          description: 'Consumption analysis of electric vehicles using machine learning algorithms and its prediction'
+        },{
+          name: 'Raiffeisen Bank, Romania',
+          description: 'Classification of bank loans to recognize if a debtor will finish the repayment in an agreed time frame or earlier'
+        },{
+          name: 'LGLN, Germany',
+          description: 'Development of a platform calculating displacement vectors between buildings in orthophotos and cadastral database'
+        },{
+          name: 'Solelos, Serbia',
+          description: 'Dungeons \& Dragons background story generation using GPT-2 generative AI model'
+        }
+       ]
       },
       {
         name: 'AI Centre, Czech Technical University in Prague',
-        description: 'Machine Learning Researcher, June 2019 - September 2020',
-        link: 'http://aic.fel.cvut.cz'
+        position: 'Machine Learning Researcher',
+        period: 'Jan 2019 - Sep 2020',
+        description: '• Focused on researching the problem of identification and classification of botnets using the IRC protocol',
+        link: 'http://aic.fel.cvut.cz',
       },
       {
-        name: 'Zentity a.s.',
-        description: 'iOS Developer, May 2017 - December 2018',
-        link: 'https://zentity.com'
-      },
+        name: 'Umotional',
+        position: 'R&D Engineer',
+        period: 'Jan 2019 - Sep 2020',
+        description: '• Researched precising reachable range of e-bike based on user data',
+        link: 'https://umotional.com',
+      }
     ],
     // Optional: List your skills, they must have `name` and `description`.
     skills: [
       {
-        name: 'Languages & Frameworks',
-        description:
-          'Python, C/C++, Java, Golang, Obj-C, Swift, R',
+        name: 'Industry Knowledge',
+        description: 'Artificial Intelligence, Machine Learning, Computer Vision, Data Engineering'
       },
       {
-        name: 'Databases',
-        description: 'Redis, MongoDB, PostgreSQL, MySQL',
+        name: 'Languages & Frameworks',
+        description: 'Python, C/C++, Java, JavaScript (React, Next.js), Golang',
       },
       {
         name: 'Libraries',
-        description: 'NumPy, Scikit-learn, Pandas, Tensorflow, PyTorch, OpenCV, HuggingFace',
+        description: 'NumPy, Scikit-learn, Tensorflow, PyTorch, OpenCV, PySpark, Flask',
       },
       {
         name: 'Services',
-        description:
-          'Kubernetes, Docker, Amazon Web Services (AWS), CI / CD',
+        description: 'Kubernetes, Docker, Apache Spark, Apache Kafka, RabbitMQ, AWS',
+      },
+      {
+        name: 'Databases',
+        description: 'MySQL, PostgreSQL, MongoDB, CouchDB, Redis',
       },
     ],
 
@@ -69,13 +96,35 @@ module.exports = {
       {
         name: 'Master\'s Degree (MSc.), Czech Technical University in Prague',
         description:
-          'Artificial Intelligence, 2018-2020' ,
+          'Artificial Intelligence' ,
+        period: '2018-2020',
+        link: 'https://oi.fel.cvut.cz/en/master-specialization-artificial-intelligence'
       },
       {
         name: 'Bachelor\'s Degree (Bc.), Czech Technical University in Prague',
-        description:
-          'Computer Science, 2015-2018' ,
+        description: 'Computer Science',
+        period: '2015-2018',
+        link: 'https://oi.fel.cvut.cz/en/artificial-intelligence-and-computer-science'
       },
+    ],
+
+    presentations: [
+      {
+        name: 'Regional Technical Exchange Conference',
+        description: 'Dungeons \& Dragons background story generation using GPT-2 generative AI model',
+        period: 'Oct. 2020'
+      }
+    ],
+
+    certificates: [
+      {
+        name: 'Certified Kubernetes Administrator',
+        description: 'Linux Academy, Sep. 2019'
+      },
+      {
+        name: 'Deep Learning in Image Analysis',
+        description: 'Mines ParisTech, Oct. 2018'
+      }
     ]
   },
   plugins: [
